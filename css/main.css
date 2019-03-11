@@ -1,0 +1,42 @@
+/*!
+ * tacensi.com v0.3
+ * Tema para WordPress para o site pessoal tacensi.com
+ * (c) 2019 Thiago Censi
+ * MIT License
+ * https://github.com/tacensi/tacensi.com
+ */
+
+/**
+ * @section Base Styles
+ */
+/* line 5, sass/components/_base.scss */
+body {
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+/* line 10, sass/components/_base.scss */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* line 16, sass/components/_base.scss */
+body {
+  height: 300vh;
+}
+
+/* line 19, sass/components/_base.scss */
+#page-top {
+  height: 13px;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+/* line 25, sass/components/_base.scss */
+#page-top svg {
+  width: 100%;
+}

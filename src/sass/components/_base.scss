@@ -1,0 +1,27 @@
+/**
+ * @section Base Styles
+ */
+
+body {
+	font-size: 16px;
+	margin: 0 auto;
+}
+
+input,
+textarea,
+select,
+button {
+	font: inherit;
+}
+body {
+	height: 300vh;
+}
+#page-top {
+	height: 13px;
+	width: 100%;
+	overflow: hidden;
+	position: fixed;
+}
+#page-top svg {
+	width: 100%;
+}
