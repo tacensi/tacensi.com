@@ -202,6 +202,7 @@ var buildStyles = function (done) {
 	// Run tasks on all Sass files
 	src(paths.styles.input)
 		.pipe(sass({
+			includePaths: ['node_modules'],
 			outputStyle: 'expanded',
 			sourceComments: true
 		}))

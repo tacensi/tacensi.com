@@ -1,0 +1,15 @@
+#site-navigation {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+#primary-menu ul {
+	margin: 0;
+	list-style-type: none;
+	text-align: right;
+}
+
+.page_item {
+	font-size: 24px;
+}
