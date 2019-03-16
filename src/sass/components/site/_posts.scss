@@ -1,0 +1,30 @@
+article.post {
+	margin-bottom: 5em;
+	padding-bottom: 5em;
+	border-bottom: 1px dotted rgba(0,0,0,.5);
+}
+
+.entry-meta {
+	font-style: italic;
+	margin-bottom: 1em;
+}
+
+.site-main {
+	max-width: 35em;
+	margin: 0 auto;
+}
+
+.entry-title {
+	margin-bottom: 0;
+}
+
+
+.wp-block-button__link {
+	border-radius: 0;
+}
+
+.entry-footer {
+	span {
+		display: block;
+	}
+}

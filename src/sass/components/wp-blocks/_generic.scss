@@ -1,0 +1,63 @@
+/**
+ * Alignment
+ **/
+.alignwide {
+	margin-left: -7.5em;
+	margin-right: -7.5em;
+	max-width: 96rem;
+}
+
+
+.alignfull {
+	margin-left: calc( -100vw / 2 + 100% / 2 );
+	margin-right: calc( -100vw / 2 + 100% / 2 );
+	max-width: 99.5vw !important;
+	width: auto;
+}
+
+.alignleft {
+	/*rtl:ignore*/
+	float: left;
+	max-width: calc(5 * (100vw / 12));
+	margin-top: 0;
+	margin-left: 0;
+	/*rtl:ignore*/
+
+	// @include media(tablet) {
+	@media (min-width $bp-medium) {
+		max-width: calc(4 * (100vw / 12));
+		/*rtl:ignore*/
+		margin-right: calc(2 * #{$grid-margins});
+	}
+}
+
+&.alignright {
+	/*rtl:ignore*/
+	float: right;
+	max-width: calc(5 * (100vw / 12));
+	margin-top: 0;
+	margin-right: 0;
+	/*rtl:ignore*/
+	margin-left: $grid-margins;
+
+	@media (min-width $bp-medium) {
+	// @include media(tablet) {
+		max-width: calc(4 * (100vw / 12));
+		margin-right: 0;
+		/*rtl:ignore*/
+		margin-left: calc(2 * #{$grid-margins});
+	}
+}
+
+&.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+
+	@include postContentMaxWidth();
+
+	@media (min-width $bp-medium) {
+	// @include media(tablet) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

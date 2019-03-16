@@ -17,26 +17,6 @@ select,
 button {
 	font: inherit;
 }
-body {
-	height: 300vh;
-}
-#page-top {
-	height: 13px;
-	width: 100%;
-	overflow: hidden;
-	position: fixed;
-}
-#page-top svg {
-	width: 100%;
-}
-
-#masthead{
-	padding-top: 3rem;
-	padding-bottom: 2rem;
-	margin-bottom: 3rem;
-	background-color: $color-gray-lighter;
-}
-
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;

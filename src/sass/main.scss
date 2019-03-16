@@ -1,4 +1,4 @@
-@import "components/config";
+@import "config";
 
 @import "Kraken/src/sass/components/normalize";
 @import "Kraken/src/sass/components/grid";
@@ -11,7 +11,8 @@
 @import "Kraken/src/sass/components/overrides";
 @import "Kraken/src/sass/components/print";
 
-@import "components/base";
-@import "components/nav";
-@import "components/posts";
-@import "components/utils";
+@import "components/site/base";
+@import "components/site/header";
+@import "components/site/nav";
+@import "components/site/posts";
+@import "components/site/utils";
