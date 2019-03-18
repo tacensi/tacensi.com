@@ -1,0 +1,41 @@
+
+blockquote.wp-block-quote {
+	border-left: 1em solid $color-gray-light;
+	font-style: italic;
+	margin-bottom: 4em;
+
+
+	cite {
+		font-size: .9em;
+	}
+
+}
+
+blockquote.wp-block-quote.is-large {
+	margin-bottom: 2em;
+
+	p {
+		font-size: 1.25em;
+	}
+}
+
+figure.wp-block-pullquote {
+	padding: 1.5em;
+	border-style: solid;
+	border-width: 3px 0;
+	font-size: 1em;
+	margin-bottom: 4em;
+
+	p {
+		font-size: 1em;
+	}
+
+	blockquote {
+		margin-bottom: 0;
+
+		cite {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}

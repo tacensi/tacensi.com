@@ -4,12 +4,51 @@
 	justify-content: flex-end;
 }
 
-#primary-menu ul {
-	margin: 0;
+#primary-menu {
+	display: flex;
 	list-style-type: none;
-	text-align: right;
+	margin: 0;
+
+	ul {
+		margin: 0;
+		list-style-type: none;
+		text-align: right;
+	}
+
+	li {
+		padding: 0 1em;
+
+		&.current-menu-item a {
+			color: $color-black;
+			text-decoration: underline;
+		}
+
+	}
+
 }
 
-.page_item {
-	font-size: 24px;
+
+@include respond-below(lg) {
+
+	#site-navigation {
+		justify-content: center;
+		margin: 2rem 0 0;
+	}
+
+}
+
+
+
+
+@include respond-below(md) {
+
+	#primary-menu {
+		display: block !important;
+		text-align: center !important;
+
+		li {
+			margin-bottom: 1em;
+		}
+	}
+
 }

@@ -24,14 +24,14 @@
 	/*rtl:ignore*/
 
 	// @include media(tablet) {
-	@media (min-width $bp-medium) {
+	@include respond-above (md) {
 		max-width: calc(4 * (100vw / 12));
 		/*rtl:ignore*/
 		margin-right: calc(2 * #{$grid-margins});
 	}
 }
 
-&.alignright {
+.alignright {
 	/*rtl:ignore*/
 	float: right;
 	max-width: calc(5 * (100vw / 12));
@@ -40,7 +40,7 @@
 	/*rtl:ignore*/
 	margin-left: $grid-margins;
 
-	@media (min-width $bp-medium) {
+	@include respond-above (md) {
 	// @include media(tablet) {
 		max-width: calc(4 * (100vw / 12));
 		margin-right: 0;
@@ -49,13 +49,11 @@
 	}
 }
 
-&.aligncenter {
+.aligncenter {
 	margin-left: auto;
 	margin-right: auto;
 
-	@include postContentMaxWidth();
-
-	@media (min-width $bp-medium) {
+	@include respond-above (md) {
 	// @include media(tablet) {
 		margin-left: 0;
 		margin-right: 0;

@@ -1,0 +1,25 @@
+.site-footer {
+	margin-top: 4em;
+	padding: 1em 0;
+
+	background-color: $color-gray-dark;
+	color: $color-white;
+}
+
+.site-info {
+	text-align: center;
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: $color-white;
+		text-decoration: underline;
+
+		&:hover {
+			text-color: $color-gray-light;
+		}
+	}
+}
+

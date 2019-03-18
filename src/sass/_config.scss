@@ -27,7 +27,6 @@ $color-gray-lighter: #f7f7f7;
 $font-primary: 'Bitter', Georgia, serif;
 $font-monospace: 'Ubuntu mono', Menlo, Monaco, "Courier New", monospace;
 
-
 // Breakpoints
 $bp-xsmall: 20em;
 $bp-small: 30em;
@@ -35,6 +34,13 @@ $bp-medium: 40em;
 $bp-large: 60em;
 $bp-xlarge: 80em;
 
+$breakpoints: (
+  xs: $bp-xsmall,
+  sm: $bp-small,
+  md: $bp-medium,
+  lg: $bp-large,
+  xg: $bp-xlarge
+);
 
 // Sizing
 $font-size: 100%;

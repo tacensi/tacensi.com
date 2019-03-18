@@ -1,23 +1,16 @@
 @import "config";
 @import "mixins";
 
-@import "Kraken/src/sass/components/normalize";
-@import "Kraken/src/sass/components/grid";
+
 @import "Kraken/src/sass/components/typography";
 @import "Kraken/src/sass/components/code";
-@import "Kraken/src/sass/components/buttons";
-@import "Kraken/src/sass/components/forms";
-@import "Kraken/src/sass/components/tables";
 
+@import "Kraken/src/sass/components/buttons";
+// @import "Kraken/src/sass/components/forms";
+@import "Kraken/src/sass/components/tables";
 @import "Kraken/src/sass/components/overrides";
-@import "Kraken/src/sass/components/print";
 
 @import "components/site/base";
-@import "components/site/header";
-@import "components/site/nav";
-@import "components/site/posts";
-@import "components/site/utils";
-@import "components/site/footer";
 
 // WP Stuff and blocks
 @import "components/wp-blocks/general";

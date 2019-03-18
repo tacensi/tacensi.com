@@ -2,13 +2,21 @@
  * @section Base Styles
  */
 
+
+html { margin: 0; }
 body {
 	font-size: 100%;
-	margin: 0 auto;
+	line-height: 1.66667;
+	margin: 0;
 
 	@media (min-width: $bp-large) {
 		font-size: 125%;
 	}
+}
+
+a {
+	color: $color-primary;
+	transition: color .2s ease;
 }
 
 input,
@@ -20,39 +28,52 @@ button {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
-	line-height: 1.2;
-	margin: 0 0 1em;
-	padding: 1em 0 0;
+	margin: 0;
+	// line-height: 1.2;
+	// margin: 0 0 1em;
+	// padding: 1em 0 0;
 	word-wrap: break-word;
+	padding-bottom: calc( 1.6667 * 1rem );
 }
 
 h1,
 .h1,
 .entry-title {
-	font-size: 2.5em;
-	padding-top: .5em;
-
-	@media (min-width: $bp-medium) {
-		font-size: 2.75em;
-	}
+	font-size:3.23077em;
+	// padding: 1.74571em 0;
+	padding-top: .872855em;
+	// font-size: 2.5em;
+	// padding-top: .5em;
 }
 
 h2,
 .h2 {
-	font-size: 2.25em;
+	font-size: 2.61538em;
+	// padding: 1.71556em 0;
+	padding-top: .85778em;
 }
 
 h3,
 .h3 {
-	font-size: 1.1875em;
-}
-
-h4, h5, h6,
-.h4, .h5, .h6 {
-	font-size: 1em;
+	font-size: 2em;
+	// padding: 2.08304em 0;
+	padding-top: 1.08304em;
 }
 
 h4,
 .h4 {
+	font-size: 1.61538em;
+	padding: 1.74598em 0;
+}
+h5,
+.h5,
+h6,
+.h6 {
+	font-size: 1em;
+	padding: 2.49967em 0;
+}
+
+h5,
+.h5 {
 	text-transform: uppercase;
 }

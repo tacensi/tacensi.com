@@ -14,3 +14,12 @@
 	margin-bottom: 3rem;
 	background-color: $color-gray-lighter;
 }
+
+@include respond-below(lg) {
+
+	.site-branding.grid-auto {
+		text-align: center;
+	}
+
+}
+
