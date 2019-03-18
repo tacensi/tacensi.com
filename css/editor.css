@@ -1,0 +1,999 @@
+/*!
+ * tacensi.com v0.3
+ * Tema para WordPress para o site pessoal tacensi.com
+ * (c) 2019 Thiago Censi
+ * MIT License
+ * https://github.com/tacensi/tacensi.com
+ */
+
+/**
+ * @section Typography
+ * Sets font styles for entire site
+ */
+/* line 6, node_modules/Kraken/src/sass/components/_typography.scss */
+body {
+  background: #ffffff;
+  color: #272727;
+  font-family: "Bitter", Georgia, serif;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+@media (min-width: 40em) {
+  /* line 6, node_modules/Kraken/src/sass/components/_typography.scss */
+  body {
+    line-height: 1.5625;
+  }
+}
+
+/* line 18, node_modules/Kraken/src/sass/components/_typography.scss */
+p {
+  margin: 0 0 1.5625em;
+}
+
+/**
+ * Hyperlink styling
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 29, node_modules/Kraken/src/sass/components/_typography.scss */
+a, .link-block-styled {
+  background-color: transparent;
+  /* 1 */
+  color: #004477;
+  text-decoration: none;
+  -webkit-text-decoration-skip: objects;
+          text-decoration-skip: objects;
+  /* 2 */
+  word-wrap: break-word;
+  /**
+	 * Improve readability when focused and also mouse hovered in all browsers.
+	 */
+}
+
+/* line 39, node_modules/Kraken/src/sass/components/_typography.scss */
+a:active, .link-block-styled:active, a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled {
+  outline: 0;
+}
+
+/* line 44, node_modules/Kraken/src/sass/components/_typography.scss */
+a:active, .link-block-styled:active, a:focus, .link-block-styled:focus, a:hover, .link-block-styled:hover, .link-block:hover .link-block-styled {
+  color: #00182b;
+  text-decoration: underline;
+}
+
+/**
+ * Creates block-level links
+ */
+/* line 57, node_modules/Kraken/src/sass/components/_typography.scss */
+a.link-block, .link-block.link-block-styled {
+  color: #272727;
+  display: block;
+  text-decoration: none;
+}
+
+/**
+ * List styling
+ */
+/* line 76, node_modules/Kraken/src/sass/components/_typography.scss */
+ul,
+ol {
+  margin: 0 0 1.5625em 2em;
+  padding: 0;
+}
+
+/* line 82, node_modules/Kraken/src/sass/components/_typography.scss */
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+/* line 89, node_modules/Kraken/src/sass/components/_typography.scss */
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 95, node_modules/Kraken/src/sass/components/_typography.scss */
+dd {
+  margin-bottom: 1.5625em;
+}
+
+/* line 99, node_modules/Kraken/src/sass/components/_typography.scss */
+dt {
+  font-weight: bold;
+}
+
+/**
+ * @bugfix Prevent webkit from removing list semantics
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+/* line 108, node_modules/Kraken/src/sass/components/_typography.scss */
+.list-unstyled, .list-inline {
+  list-style: none;
+}
+
+/* line 111, node_modules/Kraken/src/sass/components/_typography.scss */
+.list-unstyled > li:before, .list-inline > li:before {
+  content: "\200B";
+  /* 1 */
+  position: absolute;
+  /* 2 */
+}
+
+/**
+ * Removes list styling.
+ * For semantic reasons, should only be used on unordered lists.
+ */
+/* line 121, node_modules/Kraken/src/sass/components/_typography.scss */
+.list-unstyled {
+  margin-left: 0;
+}
+
+/**
+ * Display lists on a single line.
+ */
+/* line 130, node_modules/Kraken/src/sass/components/_typography.scss */
+.list-inline {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  padding: 0;
+}
+
+/* line 137, node_modules/Kraken/src/sass/components/_typography.scss */
+.list-inline > li {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+/**
+ * Heading styling for h1 through h6 elements.
+ * Heading class lets you use one heading type for semantics, but style it as another heading type.
+ */
+/* line 149, node_modules/Kraken/src/sass/components/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0 0 1em;
+  padding: 1em 0 0;
+  word-wrap: break-word;
+}
+
+/* line 157, node_modules/Kraken/src/sass/components/_typography.scss */
+h1,
+.h1 {
+  font-size: 1.5em;
+  padding-top: .5em;
+}
+
+@media (min-width: 40em) {
+  /* line 157, node_modules/Kraken/src/sass/components/_typography.scss */
+  h1,
+  .h1 {
+    font-size: 1.75em;
+  }
+}
+
+/* line 167, node_modules/Kraken/src/sass/components/_typography.scss */
+h2,
+.h2 {
+  font-size: 1.3125em;
+}
+
+/* line 172, node_modules/Kraken/src/sass/components/_typography.scss */
+h3,
+.h3 {
+  font-size: 1.1875em;
+}
+
+/* line 177, node_modules/Kraken/src/sass/components/_typography.scss */
+h4, h5, h6,
+.h4, .h5, .h6 {
+  font-size: 1em;
+}
+
+/* line 182, node_modules/Kraken/src/sass/components/_typography.scss */
+h4,
+.h4 {
+  text-transform: uppercase;
+}
+
+/**
+ * Lines, Quotes and Emphasis
+ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 196, node_modules/Kraken/src/sass/components/_typography.scss */
+hr {
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 0 solid transparent;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  margin: 2em auto;
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 208, node_modules/Kraken/src/sass/components/_typography.scss */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 216, node_modules/Kraken/src/sass/components/_typography.scss */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 225, node_modules/Kraken/src/sass/components/_typography.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 234, node_modules/Kraken/src/sass/components/_typography.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 241, node_modules/Kraken/src/sass/components/_typography.scss */
+mark {
+  background: #fbf9c9;
+  color: #272727;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 249, node_modules/Kraken/src/sass/components/_typography.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 256, node_modules/Kraken/src/sass/components/_typography.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 264, node_modules/Kraken/src/sass/components/_typography.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 268, node_modules/Kraken/src/sass/components/_typography.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/**
+ * Blockquotes
+ */
+/* line 277, node_modules/Kraken/src/sass/components/_typography.scss */
+blockquote {
+  font-size: 1.1875em;
+  font-style: italic;
+  margin: 0 0 1.5625em;
+  padding-left: 0.8421052632em;
+  padding-right: 0.8421052632em;
+}
+
+/* line 284, node_modules/Kraken/src/sass/components/_typography.scss */
+blockquote cite {
+  color: #808080;
+  font-size: 0.8421052632em;
+  padding-top: 1em;
+}
+
+/* line 291, node_modules/Kraken/src/sass/components/_typography.scss */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* line 296, node_modules/Kraken/src/sass/components/_typography.scss */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+}
+
+/**
+ * @section Code
+ * Styling for code and preformatted text.
+ */
+/* line 6, node_modules/Kraken/src/sass/components/_code.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: "Ubuntu mono", Menlo, Monaco, "Courier New", monospace;
+  font-size: 0.875em;
+}
+
+/* line 14, node_modules/Kraken/src/sass/components/_code.scss */
+code {
+  background-color: #f7f7f7;
+  color: #dd1144;
+  padding: 0.25em;
+  word-wrap: break-word;
+}
+
+/* line 21, node_modules/Kraken/src/sass/components/_code.scss */
+pre {
+  background-color: #f4f4f4;
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 1.5625em;
+  overflow: auto;
+  padding: 0.8125em;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* line 32, node_modules/Kraken/src/sass/components/_code.scss */
+pre code {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-size: 1em;
+  padding: 0;
+}
+
+/**
+ * @section Buttons
+ * Styling for CSS buttons.
+ */
+/**
+ * Primary buttons
+ */
+/* line 10, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn {
+  background-color: #004477;
+  border: 1px solid #004477;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 0.9375em;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-right: 0.3125em;
+  margin-bottom: 0.3125em;
+  padding: 0.5em 0.6875em;
+  text-decoration: none;
+  white-space: normal;
+}
+
+/* line 24, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn:hover, .btn:active, .btn.active {
+  background-color: #00182b;
+  border-color: #00182b;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/**
+ * Secondary buttons
+ */
+/* line 38, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn-secondary {
+  background-color: #808080;
+  border-color: #808080;
+}
+
+/* line 42, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn-secondary:hover, .btn-secondary:active, .btn-secondary.active {
+  background-color: #5a5a5a;
+  border-color: #5a5a5a;
+}
+
+/**
+ * Active state
+ */
+/* line 54, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn:active,
+.btn.active {
+  -webkit-box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+  outline: 0;
+}
+
+/**
+ * Disabled state
+ */
+/* line 64, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn[disabled] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/**
+ * Button size
+ */
+/* line 75, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn-large {
+  font-size: 1em;
+  line-height: normal;
+  padding: 0.6875em 0.9375em;
+}
+
+/**
+ * Block-level buttons
+ */
+/* line 85, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn-block,
+input[type="submit"].btn-block,
+input[type="reset"].btn-block,
+input[type="button"].btn-block {
+  display: block;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+
+/**
+ * General styles
+ */
+/* line 100, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn,
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  /**
+	 * @workaround Override default button styling
+	 * @affected Webkit/Firefox
+	 */
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove right margin on last element and inputs
+ */
+/* line 121, node_modules/Kraken/src/sass/components/_buttons.scss */
+.btn:last-child,
+input.btn {
+  margin-right: 0;
+}
+
+/**
+ * @section Tables
+ * Styling for tables
+ */
+/* line 6, node_modules/Kraken/src/sass/components/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 1.5625em;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* line 14, node_modules/Kraken/src/sass/components/_tables.scss */
+th,
+td {
+  text-align: left;
+  padding: 0.5em;
+}
+
+/* line 20, node_modules/Kraken/src/sass/components/_tables.scss */
+th {
+  border-bottom: 0.125em solid #e5e5e5;
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+/* line 26, node_modules/Kraken/src/sass/components/_tables.scss */
+td {
+  border-top: 1px solid #e5e5e5;
+  vertical-align: top;
+}
+
+/**
+ * Adds zebra striping
+ */
+/* line 34, node_modules/Kraken/src/sass/components/_tables.scss */
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+/**
+ * Reduces padding on condensed tables
+ */
+/* line 42, node_modules/Kraken/src/sass/components/_tables.scss */
+.table-condensed th,
+.table-condensed td {
+  padding: 0.25em;
+}
+
+/**
+ * @section Overrides
+ * Nudge and tweak alignment, spacing, and visibility.
+ */
+/**
+ * Text sizes
+ */
+/* line 11, node_modules/Kraken/src/sass/components/_overrides.scss */
+.text-small {
+  font-size: 0.9375em;
+}
+
+/* line 15, node_modules/Kraken/src/sass/components/_overrides.scss */
+.text-large {
+  font-size: 1.1875em;
+  line-height: 1.4;
+}
+
+@media (min-width: 40em) {
+  /* line 15, node_modules/Kraken/src/sass/components/_overrides.scss */
+  .text-large {
+    font-size: 1.3125em;
+  }
+}
+
+/**
+ * Text colors
+ */
+/* line 29, node_modules/Kraken/src/sass/components/_overrides.scss */
+.text-muted {
+  color: #808080;
+}
+
+/**
+ * Text alignment
+ */
+/* line 38, node_modules/Kraken/src/sass/components/_overrides.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 42, node_modules/Kraken/src/sass/components/_overrides.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 46, node_modules/Kraken/src/sass/components/_overrides.scss */
+.text-left {
+  text-align: left;
+}
+
+@media (min-width: 40em) {
+  /* line 51, node_modules/Kraken/src/sass/components/_overrides.scss */
+  .text-right-medium {
+    text-align: right;
+  }
+}
+
+/**
+ * Floats
+ */
+/* line 61, node_modules/Kraken/src/sass/components/_overrides.scss */
+.float-left {
+  float: left;
+}
+
+/* line 65, node_modules/Kraken/src/sass/components/_overrides.scss */
+.float-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 71, node_modules/Kraken/src/sass/components/_overrides.scss */
+.float-right {
+  float: right;
+}
+
+/**
+ * Margins
+ */
+/* line 80, node_modules/Kraken/src/sass/components/_overrides.scss */
+.no-margin-top {
+  margin-top: 0;
+}
+
+/* line 84, node_modules/Kraken/src/sass/components/_overrides.scss */
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+/* line 88, node_modules/Kraken/src/sass/components/_overrides.scss */
+.margin-top {
+  margin-top: 1.5625em;
+}
+
+/* line 92, node_modules/Kraken/src/sass/components/_overrides.scss */
+.margin-bottom {
+  margin-bottom: 1.5625em;
+}
+
+/* line 96, node_modules/Kraken/src/sass/components/_overrides.scss */
+.margin-bottom-small {
+  margin-bottom: 0.5em;
+}
+
+/* line 100, node_modules/Kraken/src/sass/components/_overrides.scss */
+.margin-bottom-large {
+  margin-bottom: 2em;
+}
+
+/**
+ * Padding
+ */
+/* line 109, node_modules/Kraken/src/sass/components/_overrides.scss */
+.no-padding-top {
+  padding-top: 0;
+}
+
+/* line 113, node_modules/Kraken/src/sass/components/_overrides.scss */
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+/* line 117, node_modules/Kraken/src/sass/components/_overrides.scss */
+.padding-top {
+  padding-top: 1.5625em;
+}
+
+/* line 121, node_modules/Kraken/src/sass/components/_overrides.scss */
+.padding-top-small {
+  padding-top: 0.5em;
+}
+
+/* line 125, node_modules/Kraken/src/sass/components/_overrides.scss */
+.padding-top-large {
+  padding-top: 2em;
+}
+
+/* line 129, node_modules/Kraken/src/sass/components/_overrides.scss */
+.padding-bottom {
+  padding-bottom: 1.5625em;
+}
+
+/* line 133, node_modules/Kraken/src/sass/components/_overrides.scss */
+.padding-bottom-small {
+  padding-bottom: 0.5em;
+}
+
+/* line 137, node_modules/Kraken/src/sass/components/_overrides.scss */
+.padding-bottom-large {
+  padding-bottom: 2em;
+}
+
+/**
+ * Visibility
+ */
+/*
+ * Hide only visually, but have it available for screen readers:
+ * @link https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+/* line 154, node_modules/Kraken/src/sass/components/_overrides.scss */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  /* 1 */
+  width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard
+ * @link https://www.drupal.org/node/897638
+ */
+/* line 170, node_modules/Kraken/src/sass/components/_overrides.scss */
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/**
+ * @workaround
+ * @affected IE 8/9/10
+ * @link http://juicystudio.com/article/screen-readers-display-none.php
+ */
+/* line 186, node_modules/Kraken/src/sass/components/_overrides.scss */
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+
+/**
+ * Contain floats
+ * The space content is one way to avoid an Opera bug when the `contenteditable` attribute is included anywhere else in the document.
+ * @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
+ */
+/* line 198, node_modules/Kraken/src/sass/components/_overrides.scss */
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+/* line 204, node_modules/Kraken/src/sass/components/_overrides.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/**
+ * @section Base Styles
+ */
+/* line 6, sass/components/site/_base.scss */
+html {
+  margin: 0;
+}
+
+/* line 7, sass/components/site/_base.scss */
+body {
+  font-size: 100%;
+  line-height: 1.66667;
+  margin: 0;
+}
+
+@media (min-width: 60em) {
+  /* line 7, sass/components/site/_base.scss */
+  body {
+    font-size: 125%;
+  }
+}
+
+/* line 17, sass/components/site/_base.scss */
+a, .link-block-styled {
+  color: #004477;
+  -webkit-transition: color .2s ease;
+  transition: color .2s ease;
+}
+
+/* line 22, sass/components/site/_base.scss */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* line 29, sass/components/site/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+  word-wrap: break-word;
+  padding-bottom: calc( 1.6667 * 1rem);
+}
+
+/* line 39, sass/components/site/_base.scss */
+h1,
+.h1,
+.entry-title {
+  font-size: 3.23077em;
+  padding-top: .872855em;
+}
+
+/* line 49, sass/components/site/_base.scss */
+h2,
+.h2 {
+  font-size: 2.61538em;
+  padding-top: .85778em;
+}
+
+/* line 56, sass/components/site/_base.scss */
+h3,
+.h3 {
+  font-size: 2em;
+  padding-top: 1.08304em;
+}
+
+/* line 63, sass/components/site/_base.scss */
+h4,
+.h4 {
+  font-size: 1.61538em;
+  padding: 1.74598em 0;
+}
+
+/* line 68, sass/components/site/_base.scss */
+h5,
+.h5,
+h6,
+.h6 {
+  font-size: 1em;
+  padding: 2.49967em 0;
+}
+
+/* line 76, sass/components/site/_base.scss */
+h5,
+.h5 {
+  text-transform: uppercase;
+}
+
+/**
+ * Alignment
+ **/
+/* line 4, sass/components/wp-blocks/_general.scss */
+.alignwide {
+  margin-left: -7.5em;
+  margin-right: -7.5em;
+  max-width: 96rem;
+}
+
+/* line 11, sass/components/wp-blocks/_general.scss */
+.alignfull {
+  margin-left: calc( -100vw / 2 + 100% / 2);
+  margin-right: calc( -100vw / 2 + 100% / 2);
+  max-width: 99.5vw !important;
+  width: auto;
+}
+
+/* line 18, sass/components/wp-blocks/_general.scss */
+.alignleft {
+  /*rtl:ignore*/
+  float: left;
+  max-width: calc(5 * (100vw / 12));
+  margin-top: 0;
+  margin-left: 0;
+  /*rtl:ignore*/
+}
+
+@media (min-width: 40em) {
+  /* line 18, sass/components/wp-blocks/_general.scss */
+  .alignleft {
+    max-width: calc(4 * (100vw / 12));
+    /*rtl:ignore*/
+    margin-right: calc(2 * 1.4%);
+  }
+}
+
+/* line 34, sass/components/wp-blocks/_general.scss */
+.alignright {
+  /*rtl:ignore*/
+  float: right;
+  max-width: calc(5 * (100vw / 12));
+  margin-top: 0;
+  margin-right: 0;
+  /*rtl:ignore*/
+  margin-left: 1.4%;
+}
+
+@media (min-width: 40em) {
+  /* line 34, sass/components/wp-blocks/_general.scss */
+  .alignright {
+    max-width: calc(4 * (100vw / 12));
+    margin-right: 0;
+    /*rtl:ignore*/
+    margin-left: calc(2 * 1.4%);
+  }
+}
+
+/* line 52, sass/components/wp-blocks/_general.scss */
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 40em) {
+  /* line 52, sass/components/wp-blocks/_general.scss */
+  .aligncenter {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 4, sass/components/wp-blocks/_button.scss */
+.wp-block-button .wp-block-button__link {
+  background-color: #004477;
+  border-radius: 0;
+  text-decoration: none;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+/* line 11, sass/components/wp-blocks/_button.scss */
+.wp-block-button .wp-block-button__link:hover {
+  background-color: #272727;
+}
+
+/* line 2, sass/components/wp-blocks/_quote.scss */
+blockquote.wp-block-quote {
+  border-left: 1em solid #e5e5e5;
+  font-style: italic;
+  margin-bottom: 4em;
+}
+
+/* line 8, sass/components/wp-blocks/_quote.scss */
+blockquote.wp-block-quote cite {
+  font-size: .9em;
+}
+
+/* line 14, sass/components/wp-blocks/_quote.scss */
+blockquote.wp-block-quote.is-large {
+  margin-bottom: 2em;
+}
+
+/* line 17, sass/components/wp-blocks/_quote.scss */
+blockquote.wp-block-quote.is-large p {
+  font-size: 1.25em;
+}
+
+/* line 22, sass/components/wp-blocks/_quote.scss */
+figure.wp-block-pullquote {
+  padding: 1.5em;
+  border-style: solid;
+  border-width: 3px 0;
+  font-size: 1em;
+  margin-bottom: 4em;
+}
+
+/* line 29, sass/components/wp-blocks/_quote.scss */
+figure.wp-block-pullquote p {
+  font-size: 1em;
+}
+
+/* line 33, sass/components/wp-blocks/_quote.scss */
+figure.wp-block-pullquote blockquote {
+  margin-bottom: 0;
+}
+
+/* line 36, sass/components/wp-blocks/_quote.scss */
+figure.wp-block-pullquote blockquote cite {
+  margin: 0;
+  padding: 0;
+}

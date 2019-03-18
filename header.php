@@ -33,7 +33,7 @@
 
 		<div class="container">
 
-			<div class="row row-start-small">
+			<div class="row row-bottom">
 
 				<div class="site-branding grid-auto">
 					<?php

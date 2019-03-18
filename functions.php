@@ -47,6 +47,11 @@ if ( ! function_exists( 'tacensi_setup' ) ) :
 			'menu-1' => esc_html__( 'Primary', 'tacensi' ),
 		) );
 
+		/**
+		 * Post formats
+		 **/
+		add_theme_support( 'post-formats', array( 'link', 'image', 'quote', 'gallery', 'video' ) );
+
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -79,6 +84,14 @@ if ( ! function_exists( 'tacensi_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		  *  Add support for editor styles.
+		  */
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'css/editor.css' );
+		add_editor_style( 'https://fonts.googleapis.com/css?family=Bitter:400,400i,700' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'tacensi_setup' );
@@ -120,12 +133,13 @@ add_action( 'widgets_init', 'tacensi_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tacensi_scripts() {
-	wp_enqueue_style( 'tacensi-style', get_template_directory_uri() . '/css/main.min.css' );
+	wp_enqueue_style( 'tacensi-style', get_template_directory_uri() . '/css/main.css' );
 
 	wp_enqueue_script( 'tacensi-scripts', get_template_directory_uri() . '/js/main.min.js', array(), '20151215', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'tacensi_scripts' );
+
 
 /**
  * Implement the Custom Header feature.
